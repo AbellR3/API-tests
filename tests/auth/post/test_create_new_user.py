@@ -17,7 +17,6 @@ def test_create_new_user():
     assert response.status_code == 201
 
     response_dict = response.json()
-    print(response_dict)
     assert str(response_dict['employeeId']) == body['employeeId']
     assert response_dict['email'] == body['email']
 

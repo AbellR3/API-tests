@@ -1,8 +1,11 @@
-from email import header
 import requests
 from STATIC import auth_url
 import string
 import random
+
+
+
+
 
 
 def generate_email():
@@ -35,11 +38,31 @@ def login(body={}):
     return response
 
 
-class AuthorisedFunc:
+class AuthorisedHeader:
     def __init__(self, user_data):
-        self.token = user_data['token']
-
-    header = {'accept': 'application/json',
+        self.header = {'accept': 'application/json',
               'Content-Type': 'application/json',
-              
+              'authorization': user_data['token']
               }
+
+
+def delete_profile(header):
+    r = requests.request('DELETE', auth_url + '/api/auth', headers=header)
+    return r
+
+
+    
+# class Standart_request:
+#     def __init__(self, url:str, method:str):
+#         self.url = url
+#         self.method = method
+
+#     def request(self, body={}):
+#         header = {'accept': 'application/json',
+#                   'Content-Type': 'application/json'
+#                   }
+#         response = requests.request(
+#             self.method, auth_url+'/api/auth/signin', json=body, headers=header)
+#         return response
+
+

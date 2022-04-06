@@ -1,5 +1,6 @@
 from typing import Dict
-from base import create_user_api, generate_email, login
+from urllib.parse import uses_relative
+from base import AuthorisedHeader, create_user_api, generate_email, login, delete_profile
 import pytest
 import random
 
@@ -14,6 +15,16 @@ def user_data() -> Dict:
     body = {'email': response['email'],
             'password': 'remote236'
             }
-    user_data_dict = login(body)
+    user_data_dict = login(body).json()
+    print(user_data_dict)
+    yield user_data_dict
+    
+    e = AuthorisedHeader(user_data_dict)
+    header = e.header
 
-    return user_data_dict.json()
+    r = delete_profile(header) 
+
+
+
+
+
