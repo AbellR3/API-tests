@@ -5,7 +5,7 @@ from STATIC import auth_url
 from base import create_user_api, generate_email
 
 
-def test_create_new_user():
+def test_signup():
 
     id = str(random.randint(100, 100000))
     email = generate_email()

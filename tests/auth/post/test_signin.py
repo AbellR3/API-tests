@@ -1,7 +1,7 @@
 from base import login
 
 
-def test_login_positive(user_data):
+def test_signin_positive(user_data):
     body = {'email': user_data['email'],
             'password': 'remote236'
             }
@@ -9,7 +9,7 @@ def test_login_positive(user_data):
     assert response.status_code == 201
 
 
-def test_login_not_correct_date():
+def test_signin_not_correct_date():
     body = {'email': 'simple@email.qqqq',
             'password': 'remote236'
             }

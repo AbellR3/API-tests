@@ -18,7 +18,6 @@ def user_data() -> Dict:
     user_data_dict = login(body).json()
     print(user_data_dict)
     yield user_data_dict
-    
     e = AuthorisedHeader(user_data_dict)
     header = e.header
 
