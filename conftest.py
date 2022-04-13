@@ -1,5 +1,4 @@
 from typing import Dict
-from urllib.parse import uses_relative
 from base import AuthorisedHeader, create_user_api, generate_email, login, delete_profile
 import pytest
 import random
