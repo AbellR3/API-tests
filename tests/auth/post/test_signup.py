@@ -9,6 +9,7 @@ def test_signup():
 
     id = str(random.randint(100, 100000))
     email = generate_email()
+    print(email)
     body = {'email': email,
             'employeeId': id
             }
