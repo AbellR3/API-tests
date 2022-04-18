@@ -3,6 +3,7 @@ import requests
 
 
 def test_get_current_prifile(user_data):
+    '''This test assert that profile have correct token'''
     e = AuthorisedHeader(user_data)
     header = e.header
     response = requests.request('GET', auth_url + '/api/auth/current-profile', headers=header)

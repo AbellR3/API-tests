@@ -52,17 +52,6 @@ def delete_profile(header):
 
 
     
-# class Standart_request:
-#     def __init__(self, url:str, method:str):
-#         self.url = url
-#         self.method = method
 
-#     def request(self, body={}):
-#         header = {'accept': 'application/json',
-#                   'Content-Type': 'application/json'
-#                   }
-#         response = requests.request(
-#             self.method, auth_url+'/api/auth/signin', json=body, headers=header)
-#         return response
 
 
