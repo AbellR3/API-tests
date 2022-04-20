@@ -1,11 +1,10 @@
+from urllib import response
 import requests
 from STATIC import auth_url
 import string
 import random
-
-
-
-
+import requests
+from tests.src.enums.global_enums import GlobalErrorMessages
 
 
 def generate_email():
@@ -41,9 +40,9 @@ def login(body={}):
 class AuthorisedHeader:
     def __init__(self, user_data):
         self.header = {'accept': 'application/json',
-              'Content-Type': 'application/json',
-              'authorization': user_data['token']
-              }
+                       'Content-Type': 'application/json',
+                       'authorization': user_data['token']
+                       }
 
 
 def delete_profile(header):
@@ -51,7 +50,21 @@ def delete_profile(header):
     return r
 
 
+class ResponseValidator:
+    def __init__(self, response) -> None:
+        self.response = response
+        self.response_json =response.json()
+
+    def validator(self, schema):
+        if isinstance(self.response_json, list):
+            for item in self.response_json:
+                 schema.parse_obj(item)
+        else:
+            schema.parse_obj(self.response_json)
+        return self
     
-
-
+    def assert_status_code(self,status_code):
+        assert self.response.status_code == status_code, GlobalErrorMessages.WRONG_STATUS_CODE
+        return self
+    
 

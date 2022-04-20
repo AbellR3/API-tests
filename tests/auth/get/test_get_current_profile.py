@@ -16,7 +16,6 @@ def test_get_current_prifile_negative(user_data):
     e = AuthorisedHeader(user_data)
     header = e.header
     header['authorization'] = 'asdxcbv234ased1da2ease1'
-    print(header)
     response = requests.request('GET', auth_url + '/api/auth/current-profile', headers=header)
     assert response.status_code == 401
     response_dict = response.json()

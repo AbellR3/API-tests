@@ -1,8 +1,9 @@
-from pydantic import BaseModel, validator
+from pydantic import BaseModel, EmailStr, Field, validator
+
 
 
 class Profile(BaseModel):
     id: int
     employeeId: int
-    email: bool
+    email: EmailStr
     isDefaultPassword: bool
