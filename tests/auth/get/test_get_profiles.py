@@ -1,4 +1,5 @@
 
+from urllib.request import HTTPCookieProcessor
 from tests.src.pydandic_shemas.get_prifiles_schema import Profile
 import requests
 from base import AuthorisedHeader, ResponseValidator
