@@ -54,26 +54,11 @@ def update_inner_value(this_dict: dict, key_elem, value) -> dict:
         for item in key_elem[:-1]:
             if item not in this_dict.keys():
                 this_dict[item] = {}
-            this_dict = this_dict[item]
+            else:
+                this_dict = this_dict[item]
         this_dict[key_elem[-1]] = value
 
 
-new_dict = update_inner_value(a, ['c', 'd', 'q'], 222)
+new_dict = update_inner_value(a, ['c', 'd',], 1111)
+print(a.keys())
 print(a)
-
-
-class Tools:
-    def __init__(self, result) -> None:
-        self.result = result
-
-    def update_inner_value(self, keys, value):
-        if not isinstance(keys, list):
-            self.result[keys] = value
-        else:
-            temp = self.result
-            for item in keys[:-1]:
-                if item not in temp.keys():
-                    temp[item] = {}
-                temp = temp[item]
-            temp[keys[-1]] = value
-        return self
