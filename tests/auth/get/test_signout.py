@@ -8,12 +8,12 @@ def test_sign_out(user_data):
     e = AuthorisedHeader(user_data)
     headers = e.header
     response = requests.request(
-    'GET', auth_url+'/api/auth/signout', headers=headers)
+        'GET', auth_url+'/api/auth/signout', headers=headers)
     assert response.status_code == 200
 
 
 def test_sign_out_negative(user_data):
 
     response = requests.request(
-    'GET', auth_url+'/api/auth/signout', headers={})
+        'GET', auth_url+'/api/auth/signout', headers={})
     assert response.status_code == 400

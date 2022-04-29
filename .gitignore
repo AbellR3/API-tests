@@ -1,2 +1,4 @@
 env/
 allureress/
+allure-2.17.3/
+__pycache__/
