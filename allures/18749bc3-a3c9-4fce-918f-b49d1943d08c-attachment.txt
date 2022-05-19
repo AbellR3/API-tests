@@ -1,1 +1,0 @@
-{'id': 310, 'email': 'rydxnv33@email.com', 'employeeId': 60829, 'isDefaultPassword': True, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJ5ZHhudjMzQGVtYWlsLmNvbSIsImVtcGxveWVlSWQiOjYwODI5LCJpYXQiOjE2NTIyNTgxNDEsImV4cCI6MTY1MjI4Njk0MX0.YOZhe6ULmhH-SZMwvpAp8s9MIz_muGmJL1n64BG_sjk'}
