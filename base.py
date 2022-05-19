@@ -64,7 +64,7 @@ class ResponseValidator:
         return self
     
     def assert_status_code(self,status_code):
-        assert self.response.status_code == status_code, GlobalErrorMessages.WRONG_STATUS_CODE
+        assert self.response.status_code == status_code, GlobalErrorMessages.WRONG_STATUS_CODE.value
         return self
     
 

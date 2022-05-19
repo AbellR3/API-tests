@@ -1,0 +1,1 @@
+{'id': 308, 'email': 'wcurgq48@email.com', 'employeeId': 97865, 'isDefaultPassword': True, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndjdXJncTQ4QGVtYWlsLmNvbSIsImVtcGxveWVlSWQiOjk3ODY1LCJpYXQiOjE2NTIyNTgwMTQsImV4cCI6MTY1MjI4NjgxNH0.GBz8zKPPf_Y5LJpbFthPrDr5OiuQqxEz_DhiSV3hsxo'}

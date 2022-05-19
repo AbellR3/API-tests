@@ -1,4 +1,3 @@
-import pytest
 import requests
 from base import AuthorisedHeader, ResponseValidator
 from STATIC import auth_url
